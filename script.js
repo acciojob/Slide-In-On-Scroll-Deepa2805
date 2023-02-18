@@ -1,19 +1,4 @@
-// Your JS code here.
-function debounce(func, wait = 20, immediate = true) {
-            var timeout;
-            return function () {
-                var context = this, args = arguments;
-                var later = function () {
-                    timeout = null;
-                    if (!immediate) func.apply(context, args);
-                };
-                var callNow = immediate && !timeout;
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-                if (callNow) func.apply(context, args);
-            };
-        }
-
+// Your JS code here
         function addSlide() {
             var scrolledImages = document.querySelectorAll('.slide-in');
             console.log("ScrolledImages",scrolledImages);
